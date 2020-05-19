@@ -16,6 +16,8 @@ public class CarController :MonoBehaviour
             {
                 transform.Translate(speed * Time.deltaTime, 0, 0);
                 speed *= deceleration;
+
+                if (speed < 0.1) speed = 0;
             });
     }
 }
